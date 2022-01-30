@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "image": "http://u6.platformalp.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/7e512960b4c58dac23ad262256d539b7.jpg",
+      "name": "Ролл с лососем",
+      "description": "Рис, нори, лосось",
+      "price": 130,
+      "category": "clasik",
+      "id": 4
+    },
+    {
+      "image": "http://u6.platformalp.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/206f4732b68f40cf10dec7bbfb3f0424.jpg",
+      "name": "Ролл с угрем",
+      "description": "Рис, нори, угорь, унаги соус, кунжут",
+      "price": 150,
+      "category": "clasik",
+      "id": 55
+    },
+    {
+      "image": "http://u6.platformalp.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/7290c94b3c2c1796da80c16eb17893bc.jpg",
+      "name": "Ролл с огурцом",
+      "description": "Рис, нори, огурец, кунжут",
+      "price": 100,
+      "category": "clasik",
+      "id": 5
+    },
+    {
+      "image": "http://u6.platformalp.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/6e90b796db0521c98d2c8538c18661a0.jpg",
+      "name": "Ролл с креветкой",
+      "description": "Рис, нори, креветка",
+      "price": 100,
+      "category": "clasik",
+      "id": 6
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/7dbcea063adc529905e2488b7594f20d.png",
+      "name": "Сегун",
+      "description": "Рис, нори, сыр, жареный лосось, огурец, спайси соус, пармезан",
+      "price": 280,
+      "category": "hot",
+      "id": 11
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/d90b8ddc052cef4f119ded9de9fa77d5.png",
+      "name": "цезарь хот",
+      "description": "Рис, нори, курица, лист салата, помидор, белый соус, кунжут",
+      "price": 260,
+      "category": "hot",
+      "id": 7
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/a36748e030028e8623c316345cdb75a0.png",
+      "name": "Горячий краб",
+      "description": "Рис, нори, сыр, лосось, огурец, тобико, краб, гребешок, яки соус, унаги соус, кунжут",
+      "price": 330,
+      "category": "hot",
+      "id": 8
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/e3af1881d04916e213d4bd7ce43ec02b.png",
+      "name": "Казуми",
+      "description": "Рис, нори, краб, майонез, белый соус",
+      "price": 240,
+      "category": "hot",
+      "id": 9
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/476697c99e15816aec7685dd86844ecf.png",
+      "name": "Киото",
+      "description": "Рис, нори, сыр, креветка, угорь, тобико, спайси соус, пармезан",
+      "price": 350,
+      "category": "hot",
+      "id": 10
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/b6912b67f30839b265213132197b4d99.png",
+      "name": "Саванна",
+      "description": "Рис, нори, сыр, лосось жареный, помидор, лук зеленый, спайси соус, пармезан",
+      "price": 270,
+      "category": "hot",
+      "id": 111
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/0235908b64a41079127e77d07ae0be0f.png",
+      "name": "Суши стайл",
+      "description": "Рис, нори, сыр, курица, угорь, яки соус, зеленый лук, тобико",
+      "price": 320,
+      "category": "hot",
+      "id": 12
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/d26d78c65cb0f3582bdf56f82df1b75d.png",
+      "name": "Хакайдо",
+      "description": "Рис, нори, сыр, курица, помидор, лист салата, белый соус, кунжут",
+      "price": 270,
+      "category": "hot",
+      "id": 13
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1m6r0p051/3717588bdc4b56fecee580ed2229c6fe/9850dd9438d8bdc770134d4010f1ce65.png",
+      "name": "Салмон темпура",
+      "description": "Рис, нори, сыр, лосось, огурец, кляр, панировочные сухари",
+      "price": 270,
+      "category": "hot",
+      "id": 14
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1prc5r051/3717588bdc4b56fecee580ed2229c6fe/34edecef09476eae61de1e9da1a0173f.png",
+      "name": "Сет Популярный",
+      "description": "Филадельфия,Цезарь,Калифрония,Филадельфия спешл,Эсколар",
+      "price": 850,
+      "category": "sets",
+      "id": 15
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1oin5i051/3717588bdc4b56fecee580ed2229c6fe/5f25fd99ccf0d6d624dd7e995de06339.png",
+      "name": "Сет горячий хит",
+      "description": "Горячий краб,Казуми,Суши стайл,Хакайдо",
+      "price": 850,
+      "category": "sets",
+      "id": 16
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1oin5i051/3717588bdc4b56fecee580ed2229c6fe/1a8a9730b897c8bf57c9320c9c8c1a00.png",
+      "name": "Сет Хит продаж",
+      "description": "Филадельфия,Горячий краб,Казуми,Суши стайл,Хакайдо,Салмон темпура",
+      "price": 1050,
+      "category": "sets",
+      "id": 17
+    },
+    {
+      "image": "http://u21.plpstatic.ru/s/1oin5i051/3717588bdc4b56fecee580ed2229c6fe/be52b7318b881f6b5c0964f588852c18.png",
+      "name": "Сет Премиум",
+      "description": "Филадельфия,Горячий краб,Казуми,Суши стайл,Хакайдо,Салмон темпура,Ролл спайси краб,Спасичикен",
+      "price": 1180,
+      "category": "sets",
+      "id": 18
+    }
+  ]
+}

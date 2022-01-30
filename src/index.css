@@ -1,13 +1,244 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400;1,600&family=Nunito:wght@400;700&family=Playfair+Display&family=Poppins:wght@200;300;400;500;700;800;900&family=Raleway:ital,wght@0,300;1,400;1,500;1,700&family=Ubuntu:wght@300;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400;1,600&family=Nunito:wght@400;700&family=Oswald:wght@300;400;700&family=Playfair+Display&family=Poppins:wght@200;300;400;500;700;800;900&family=Raleway:ital,wght@0,300;1,400;1,500;1,700&family=Ubuntu:wght@300;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(https://yosushi.com/r/w-1440/YoSushi/files/3c/3c1dc669-9d97-4936-9c02-09ce7be30fb5.637212424860000000.jpg); */
+
+  background-color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.category {
+  margin: 35px 0;
+}
+
+/* h3, h2 {
+  color: red;
+  text-align: center;
+  margin: 40px;
+} */
+
+.firstline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.logotip {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* margin: 150px 150px 0 300px; */
+}
+
+.logotip img {
+  width: 280px;
+  margin: 100px 0 ;
+  
+}
+
+
+
+.navbar_img {
+  /* width: 100%; */
+  /* height: 400px; */
+  /* background-image: url(https://img.freepik.com/free-photo/sushi-set-in-the-shape-of-a-heart-on-a-white-plate-valentine-s-day_171081-715.jpg?size=626&ext=jpg); */
+  /* background-image: url(https://yosushi.com/r/w-1440/YoSushi/files/3c/3c1dc669-9d97-4936-9c02-09ce7be30fb5.637212424860000000.jpghttps://sushikoto.ru/wp-content/uploads/2020/01/2020-05-05-13-47-52-e1595417307812.jpg); */
+
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+.navbar_img img{
+  margin-top: 100px ;
+  /* padding-bottom: 200px; */
+  width: 450px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category li {
+  background-color: rgb(241, 234, 234);
+  padding: 13px 30px;
+  border-radius: 10px;
+  /* margin-right: 10px; */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  list-style-type: none;
+}
+
+.category .li {
+  background-color: rgb(201, 87, 87);
+}
+
+li:hover {
+  background-color: darken(#f9f9f9, 2%);
+}
+
+/* add edit page */
+
+.add-edit-page form {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  justify-content: space-between;
+}
+
+.add-edit-page form textarea {
+  margin-top: 8px;
+  outline: none;
+}
+
+.add-edit-page form textarea::placeholder {
+  font-size: 16px;
+}
+
+.filters-block {
+  display: flex;
+  margin: 25px;
+  align-items: center;
+}
+
+.filters-block div {
+  margin-right: 20px;
+  width: 220px;
+}
+
+.filters-block>div:nth-child(2) {
+  margin-right: 100px;
+  width: 150px;
+}
+
+.pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* cart-page */
+
+.cart{
+  margin: 100px 0 20px 0;
+  width: 350px;
+  
+}
+
+
+.order-button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-left-img {
+  width: 50%;
+}
+
+.detail-left-img img {
+  width: 100%;
+}
+
+.detail-right {
+  width: 50%;
+}
+
+.detail-page h3 {
+  font-size: 27px;
+}
+
+.detail-page li {
+  list-style-type: none;
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+/* !404page */
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
+}
+
+@media all and (max-width: 767px) {
+  .detail-left-img {
+    width: 100%;
+  }
+
+  .detail-right {
+    width: 100%;
+  }
+}
+
+@media all and(max-width: 480px){
+  .firstline {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and(max-width:520px){
+  .category{
+    display: none;
+  }
 }
