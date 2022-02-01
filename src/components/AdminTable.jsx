@@ -9,9 +9,7 @@ import Paper from "@mui/material/Paper";
 import { AdminContext } from "../context/AdminProvider";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { bgcolor } from "@mui/system";
 import {
-  CreditScore,
   DeleteForeverRounded,
   ModeEditOutlineRounded,
 } from "@mui/icons-material";
@@ -31,18 +29,16 @@ export default function AdminTable() {
   return (
     <TableContainer
       component={Paper}
-      sx={{
+      style={{
         display: "flex",
         justifyContent: "center",
-        width: "950px",
-        marginLeft: "100px",
-        marginTop: "100px",
+        margin: "100px 0",
         borderRadius: 5,
       }}
     >
-      <Table sx={{ bgcolor: "lightblue" }} aria-label="simple table">
+      <Table sx={{ bgcolor: "snow" }} aria-label="simple table">
         <TableHead>
-          <TableRow sx={{ bgcolor: "lightskyblue" }}>
+          <TableRow sx={{ bgcolor: "whitesmoke" }}>
             <TableCell>Название</TableCell>
             <TableCell align="right">Картинка</TableCell>
             <TableCell align="right">Цена</TableCell>

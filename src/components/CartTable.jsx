@@ -8,11 +8,13 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { ClientContext } from "../context/ClientProvider";
 import { TableFooter, Button } from "@mui/material";
+import { DeleteForever } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 // ! Итоговый бланк покупки
 
 export default function CartTable(props) {
-  const { getCart, cart, changeCount, deleteProductFromCart, detail } =
+  const { getCart, cart, changeCount, deleteProductFromCart } =
     React.useContext(ClientContext);
   React.useEffect(() => {
     getCart();
@@ -33,7 +35,7 @@ export default function CartTable(props) {
               <TableCell align="right">Цена</TableCell>
               <TableCell align="right">Колличество</TableCell>
               <TableCell align="right">Сумма</TableCell>
-              {/* <TableCell align="right">Убрать</TableCell> */}
+              {/* <TableCell align="right"></TableCell> */}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -48,7 +50,6 @@ export default function CartTable(props) {
                 <TableCell align="right">
                   {<img width="100" src={item.product.image} alt="" />}
                 </TableCell>
-
                 <TableCell align="right">{item.product.price} сом</TableCell>
                 <TableCell align="right">
                   {
@@ -66,9 +67,14 @@ export default function CartTable(props) {
                   }
                 </TableCell>
                 <TableCell align="right">{item.subPrice} сом</TableCell>
-                {/* <Button onClick={() => deleteProductFromCart(cart.products.id)}> */}
-                {/* Убрать
-                </Button> */}
+                {/* Стянуть новые данные обноаление после удаления*/}
+                <Button
+                  color="inherit"
+                  sx={{ marginTop: "35px" }}
+                  onClick={() => deleteProductFromCart(item.product.id)}
+                >
+                  <DeleteForever />
+                </Button>
               </TableRow>
             ))}
           </TableBody>
@@ -85,9 +91,11 @@ export default function CartTable(props) {
         </Table>
       </TableContainer>
       <div className="order-button">
-        <Button variant="outlined" color="secondary">
-          Оформить заказ
-        </Button>
+        <Link to="/form-sale">
+          <Button variant="outlined" color="warning">
+            Оформить заказ
+          </Button>
+        </Link>
       </div>
     </>
   );

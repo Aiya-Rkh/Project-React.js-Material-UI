@@ -1,3 +1,4 @@
+import { DownloadDone } from "@mui/icons-material";
 import {
   Button,
   FormControl,
@@ -17,10 +18,10 @@ const FiltersBlock = () => {
   const { getProducts } = useContext(ClientContext);
   const [searchValue, setSearchValue] = useState(search.get("q") || "");
   const [category, setCategory] = useState(search.get("category") || "");
-  // const [priceValue1, setPriceValue1] = useState(search.get("price_gte") || "");
 
   // ! эта функция
   const filterProducts = (key, value) => {
+    console.dir(value);
     search.set(key, value);
     let newPath = `${window.location.pathname}?${search.toString()}`;
     navigate(newPath);
@@ -28,6 +29,7 @@ const FiltersBlock = () => {
     setCategory(search.get("category") || "");
     getProducts();
   };
+
   // !сбрасывает фильтрацию
   const resetFilter = () => {
     navigate("/");
@@ -38,15 +40,23 @@ const FiltersBlock = () => {
   return (
     <>
       <div className="category">
-        {/* Сдлеать фильрацию по Li */}
-        <ul
-          value={category}
-          onClick={(e) => filterProducts("category", e.target.value)}
-        >
-          <li className="li">Все</li>
-          <li value="clasik">Классические</li>
-          <li value="hot">Запеченные</li>
-          <li value="sets">Сеты</li>
+        {/* Фильтрацию по Li */}
+        <ul value={category}>
+          <li className="li" onClick={resetFilter}>
+            Все
+          </li>
+          <li
+            onClick={(e) => filterProducts("category", "clasik")}
+            name="clasik"
+          >
+            Классические
+          </li>
+          <li onClick={(e) => filterProducts("category", "hot")} name="hot">
+            Запеченные
+          </li>
+          <li onClick={(e) => filterProducts("category", "sets")} name="sets">
+            Сеты
+          </li>
         </ul>
       </div>
       {/* filters block */}
@@ -60,27 +70,14 @@ const FiltersBlock = () => {
             color="error"
           />
         </div>
-
         <div>
-          {/* !input по категории */}
-          <FormControl color="error" fullWidth>
-            <InputLabel id="color-select">Сорт</InputLabel>
-            <Select
-              value={category}
-              onChange={(e) => filterProducts("category", e.target.value)}
-              labelId="color-select"
-              label="Выберите"
-            >
-              <MenuItem value="clasik">Классические</MenuItem>
-              <MenuItem value="hot">Запеченные</MenuItem>
-              <MenuItem value="sets">Сеты</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
-        {/* Кнопка */}
-        <div>
-          <Button onClick={resetFilter} variant="outlined" color="error">
-            Сбросить
+          <Button
+            style={{ marginTop: "10px" }}
+            onClick={resetFilter}
+            variant="outlined"
+            color="error"
+          >
+            <DownloadDone />
           </Button>
         </div>
       </div>

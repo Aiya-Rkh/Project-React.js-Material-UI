@@ -162,6 +162,33 @@ const ClientProvider = (props) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   };
+
+  // ! bot
+
+  const getProductsToBot = (info, cart) => {
+    axios.get(
+      "https://api.telegram.org/bot5197737560:AAEJ-XlDOdj6oJ9bbDKLKgDh9Vn0Qx6Ip6A/sendMessage",
+      {
+        params: {
+          parse_mode: "HTML",
+          text: ` Заказы 
+          Ф.И.О. ${info.name}
+          Почта: ${info.email}
+          Адрес: ${info.address}
+          Город: ${info.city}
+          ${cart.products.reduce(
+            (item, cur) =>
+              item +
+              `Категория: ${cur.product.category}, Цена:${cur.product.price},id:${cur.product.id}\n`,
+            ""
+          )}\nОбщая сумма: ${cart.totalPrice}`,
+
+          chat_id: "868943207",
+        },
+      }
+    );
+  };
+
   // !DETAIL PAGE
 
   const getDetail = async (id) => {
@@ -185,6 +212,7 @@ const ClientProvider = (props) => {
         setCurrentPage,
         addProductToCart,
         deleteProductFromCart,
+        getProductsToBot,
         getCart,
         getDetail,
         changeCount,

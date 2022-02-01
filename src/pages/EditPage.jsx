@@ -1,13 +1,4 @@
-import {
-  Button,
-  Container,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextareaAutosize,
-  TextField,
-} from "@mui/material";
+import { Button, Container, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AdminContext } from "../context/AdminProvider";
@@ -39,6 +30,7 @@ const EditPage = () => {
       }
     }
     saveEditedProduct(productEdit);
+    // ! navigate-значит куда отправить резалт
     navigate("/admin-panel");
   };
 
@@ -49,15 +41,24 @@ const EditPage = () => {
     <div className="add-edit-page">
       <Container
         sx={{
-          bgcolor: "lightblue",
-          marginTop: "150px",
+          bgcolor: "snow",
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "130px",
           width: "700px",
           borderRadius: 5,
           padding: "20px",
         }}
       >
-        <h2 style={{ marginLeft: "220px", color: "darkred" }}>Редактировать</h2>
-        <form onSubmit={handlesubmit}>
+        <form
+          style={{
+            width: "600px",
+          }}
+          onSubmit={handlesubmit}
+        >
+          <h2 style={{ textAlign: "center", padding: "20px " }}>
+            Редактировать
+          </h2>
           <TextField
             value={productEdit.name}
             onChange={(e) =>
@@ -103,10 +104,8 @@ const EditPage = () => {
             color="error"
             sx={{
               bgcolor: "darkred",
+              marginLeft: "28%",
               width: "270px",
-              height: "45px",
-              marginLeft: "29%",
-
               borderRadius: 5,
             }}
           >

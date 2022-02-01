@@ -21,8 +21,6 @@ const AddPage = () => {
     image: "",
   });
 
-  // const [name, setName] = useState();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(newProduct);
@@ -45,20 +43,27 @@ const AddPage = () => {
   return (
     <div className="add-edit-page">
       <Container
-        sx={{
-          bgcolor: "lightblue",
+        style={{
+          backgroundColor: "snow",
+          // display: "flex",
+          // justifyContent: "center",
           marginTop: "130px",
-          borderRadius: 5,
+          borderRadius: "5px",
           width: "700px",
           padding: "20px",
         }}
       >
-        <h3
-          style={{ color: "black", marginLeft: "220px", marginBottom: "15px" }}
-        >
-          Добавить суши
-        </h3>
         <form onSubmit={handleSubmit}>
+          <h2
+            style={{
+              color: "black",
+              textAlign: "center",
+              marginBottom: "15px",
+              width: "600px",
+            }}
+          >
+            Добавить суши:
+          </h2>
           <TextField
             value={newProduct.name}
             onChange={(e) =>
@@ -109,9 +114,11 @@ const AddPage = () => {
             variant="contained"
             sx={{
               bgcolor: "darkred",
-              width: "200px",
-              borderRadius: 3,
-              marginLeft: "35%",
+              marginLeft: "28%",
+              width: "270px",
+              borderRadius: 5,
+              // display: "felx",
+              // justifyContent: "center",
             }}
           >
             Добавить

@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
@@ -24,28 +23,19 @@ import {
 import { ClientContext } from "../context/ClientProvider";
 import { AuthContext } from "../context/AuthProvider";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Админ", "Добавить"];
 
 const Navbar = () => {
   const { cartCount, cart } = React.useContext(ClientContext);
   const { authWithGoogle, user, logout } = React.useContext(AuthContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -86,20 +76,22 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link to="/admin-panel">
+                  <Box textAlign="center">{pages[0]}</Box>
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link to="/admin-panel/add">
+                  <Box textAlign="center">{pages[1]}</Box>
+                </Link>
+              </MenuItem>
             </Menu>
           </Box>
 
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <Link to="/admin-panel">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ color: "darkred", mr: 2, my: 1, display: "block" }}
-              >
+              <Button sx={{ color: "darkred", mr: 2, my: 1, display: "block" }}>
                 <SupervisorAccountRounded />
               </Button>
             </Link>
@@ -115,10 +107,7 @@ const Navbar = () => {
             }}
           >
             <Link to="/admin-panel/add">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ mr: 15, color: "darkred", display: "block" }}
-              >
+              <Button sx={{ mr: 15, color: "darkred", display: "block" }}>
                 <AddTaskRounded />
               </Button>
             </Link>
@@ -133,10 +122,7 @@ const Navbar = () => {
             }}
           >
             <Link to="/">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ mr: 0, color: "darkred", display: "block" }}
-              >
+              <Button sx={{ mr: 0, color: "darkred", display: "block" }}>
                 <img
                   style={{ width: "130px" }}
                   src="https://mysushi.by/wp-content/uploads/2020/04/logo01.png"
@@ -150,35 +136,51 @@ const Navbar = () => {
             variant="h6"
             noWrap
             component="image"
-            sx={{ flexGrow: 2, display: { xs: "flex", md: "none" } }}
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img
-              style={{ width: "100px" }}
-              src="https://mysushi.by/wp-content/uploads/2020/04/logo01.png"
-              alt=""
-            />
+            <Link to="/">
+              <img
+                style={{ width: "100px" }}
+                src="https://mysushi.by/wp-content/uploads/2020/04/logo01.png"
+                alt=""
+              />
+            </Link>
           </Typography>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <IconButton size="small" color="inherit" sx={{ mr: 2 }}>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: {
+                xs: "none",
+                md: "flex",
+              },
+            }}
+          >
+            <IconButton
+              size="small"
+              color="inherit"
+              sx={{ mr: 2, display: "block" }}
+            >
               <Link type="number" to="/call">
                 <LocalPhoneRounded sx={{ mr: 2 }} />
                 +996 500 00 24 22
               </Link>
             </IconButton>
+          </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
             <Link to="/cart">
               <IconButton size="large" color="inherit" sx={{ mr: 2 }}>
                 <Badge color="error" badgeContent={cartCount}>
                   <AddShoppingCart />
-                  {/* <p>{cart.products.totalPrice}</p> */}
+                  {/* !указать сумму заказа */}
                 </Badge>
               </IconButton>
             </Link>
             {user ? (
               <>
-                <IconButton size="small" color="inherit">
+                {/* <IconButton size="small" color="inherit">
                   {user.displayName}
-                </IconButton>
+                </IconButton> */}
                 <IconButton sx={{ p: 0 }}>
                   <Avatar alt={user.displayName} src={user.photoURL} />
                 </IconButton>

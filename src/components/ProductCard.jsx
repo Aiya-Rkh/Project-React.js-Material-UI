@@ -15,16 +15,15 @@ export default function ProductCard(props) {
   const { addProductToCart, checkProductInCart, deleteProductFromCart } =
     React.useContext(ClientContext);
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 280, maxHeight: 750 }}>
       <CardMedia
         component="img"
         height="120"
         image={props.item.image}
         alt="sushi"
+        className="image"
         style={{
           objectFit: "contain",
-          transform: "scale(1)",
-          transition: ".3s",
         }}
       />
       <CardContent>
