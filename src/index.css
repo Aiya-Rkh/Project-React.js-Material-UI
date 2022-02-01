@@ -54,8 +54,21 @@ table {
   border-spacing: 0;
 }
 
+/* начало */
+
+html {
+  height: 100%;
+}
+
+
 body {
   font-family: "Montserrat";
+  position: relative;
+  /* min-height: 100%;
+  padding-bottom: [footer-height] */
+   min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 a {
@@ -216,55 +229,40 @@ li:hover {
   margin: 8px 0;
 }
 
-/* !404page */
-
-.page_404 {
-  padding: 40px 0;
-  background: #fff;
-  font-family: 'Arvo', serif;
+/* footer */
+.container-footer {
+  width: 250px;
+  border-style: dashed;
+  border-color: black;
+  margin: 15px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* position: fixed; */
 }
 
-.page_404 img {
-  width: 100%;
+.footer {
+  margin-left: 40%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+
 }
 
-.four_zero_four_bg {
-
-  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-  height: 400px;
-  background-position: center;
+.footer img {
+  width: 160px;
+  /* margin-top: 5px; */
 }
 
 
-.four_zero_four_bg h1 {
-  font-size: 80px;
+.footer-icons img {
+  width: 22px;
 }
 
-.four_zero_four_bg h3 {
-  font-size: 80px;
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.link_404 {
-  color: #fff !important;
-  padding: 10px 20px;
-  background: #39ac31;
-  margin: 20px 0;
-  display: inline-block;
-}
-
-.contant_box_404 {
-  margin-top: -50px;
-}
-
-@media all and (max-width: 767px) {
-  .detail-left-img {
-    width: 100%;
-  }
-
-  .detail-right {
-    width: 100%;
-  }
-}
 
 @media all and (min-width: 520px) {
   .firstline {

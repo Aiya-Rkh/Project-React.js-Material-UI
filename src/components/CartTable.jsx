@@ -10,6 +10,7 @@ import { ClientContext } from "../context/ClientProvider";
 import { TableFooter, Button } from "@mui/material";
 import { DeleteForever } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 // ! Итоговый бланк покупки
 
@@ -97,6 +98,7 @@ export default function CartTable(props) {
           </Button>
         </Link>
       </div>
+      {/* <Footer /> */}
     </>
   );
 }
