@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FormSale from "./components/FormSale";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import AdminProvider from "./context/AdminProvider";
 import AuthProvider from "./context/AuthProvider";
 import ClientProvider from "./context/ClientProvider";
@@ -28,6 +29,7 @@ const MyRoutes = () => {
               <Route path="/call" element={<PhoneNumber />} />
               <Route path="/form-sale" element={<FormSale />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </AdminProvider>
       </ClientProvider>

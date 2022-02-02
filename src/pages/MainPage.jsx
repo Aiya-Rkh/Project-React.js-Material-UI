@@ -49,9 +49,9 @@ const MainPage = () => {
             ))}
           </Grid>
         </Container>
-        <ProductsPagination />
       </Container>
-      <Footer />
+      <ProductsPagination />
+      {/* <Footer /> */}
     </>
   );
 };

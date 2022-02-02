@@ -66,9 +66,14 @@ body {
   position: relative;
   /* min-height: 100%;
   padding-bottom: [footer-height] */
-   min-height: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
+
+}
+
+#root {
+  position: relative;
 }
 
 a {
@@ -181,7 +186,7 @@ li:hover {
 
 
 .pagination {
-  margin-top: 50px;
+  margin: 50px 0 150px;
   display: flex;
   justify-content: center;
 }
@@ -191,7 +196,6 @@ li:hover {
 .cart {
   margin: 100px 0 20px 0;
   width: 350px;
-
 }
 
 
@@ -230,37 +234,57 @@ li:hover {
 }
 
 /* footer */
-.container-footer {
-  width: 250px;
-  border-style: dashed;
-  border-color: black;
-  margin: 15px;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  /* position: fixed; */
+.con-foo {
+  position: relative;
 }
 
-.footer {
+.container-footer {
+  /* width: 250px; */
+  width: 100%;
+  border-top: 1px solid rgb(209, 186, 186);
+  /* border-color: black; */
+
+  /* position: sticky; */
+  position: absolute;
+  bottom: 0;
+  margin-top: 30px;
+  padding: 10px 0;
+
+  background-color: rgb(253, 246, 246);
+}
+
+/* .footer {
   margin-left: 40%;
   display: flex;
   justify-content: center;
   margin: 10px 0;
-
-}
-
-.footer img {
-  width: 160px;
-  /* margin-top: 5px; */
-}
-
+} */
 
 .footer-icons img {
-  width: 22px;
+  width: 25px;
 }
 
 .footer-icons {
+  /* width: 60%; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 15px 0;
+
+  /* align-items: center; */
+}
+
+.footer-icons img ,p{
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.footer-info, .footer-address  {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+.footer-address img{
+  width: 15px;
 }
 
 

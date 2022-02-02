@@ -15,7 +15,14 @@ export default function ProductCard(props) {
   const { addProductToCart, checkProductInCart, deleteProductFromCart } =
     React.useContext(ClientContext);
   return (
-    <Card sx={{ maxWidth: 280, maxHeight: 750 }}>
+    <Card
+      style={{
+        minWidth: "280px",
+        height: "100%",
+        position: "relative",
+        paddingBottom: "15px",
+      }}
+    >
       <CardMedia
         component="img"
         height="120"
@@ -39,19 +46,17 @@ export default function ProductCard(props) {
         <br />
         <Typography variant="body1" color="black">
           {props.item.description}
-          <hr />
           <br />
-          {props.item.price} сом
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{ display: "flex", justicyContent: "spaceAround" }}>
         {checkProductInCart(props.item.id) ? (
           <Button
             onClick={() => deleteProductFromCart(props.item.id)}
             size="small"
             variant="contained"
             color="error"
-            sx={{ marginLeft: "15px" }}
+            sx={{ marginLeft: "15px", marginTop: 0 }}
           >
             <AddShoppingCartRounded />
           </Button>
@@ -60,12 +65,25 @@ export default function ProductCard(props) {
             onClick={() => addProductToCart(props.item)}
             size="small"
             variant="outlined"
-            sx={{ marginLeft: "15px" }}
+            style={{ marginLeft: "15px", bottom: "10px", position: "absolute" }}
             color="error"
           >
             <AddShoppingCartRounded />
           </Button>
         )}
+
+        <Typography
+          comsponent="div"
+          variant="h6"
+          style={{
+            marginLeft: "60%",
+            position: "absolute",
+            bottom: "10px",
+            fontWeight: "bold",
+          }}
+        >
+          {props.item.price} сом
+        </Typography>
 
         {/* <Link
           style={{ marginLeft: 15 }}

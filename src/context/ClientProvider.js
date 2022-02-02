@@ -112,6 +112,20 @@ const ClientProvider = (props) => {
     }
   };
   // !удаление с корзины
+  const getCart = () => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+    let action = {
+      type: "GET_CART",
+      payload: cart,
+    };
+    dispatch(action);
+  };
 
   const deleteProductFromCart = (id) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
@@ -128,21 +142,8 @@ const ClientProvider = (props) => {
       payload: cart.products.length,
     };
     dispatch(action);
-  };
-  // ! стягивает данные
-  const getCart = () => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-      cart = {
-        products: [],
-        totalPrice: 0,
-      };
-    }
-    let action = {
-      type: "GET_CART",
-      payload: cart,
-    };
-    dispatch(action);
+    // ! стягивает данные
+    getCart();
   };
 
   const changeCount = (count, id) => {

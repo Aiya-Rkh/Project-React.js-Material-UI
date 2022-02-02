@@ -14,7 +14,7 @@ const ProductsPagination = () => {
         count={count}
         variant="outlined"
         shape="rounded"
-        sx={{ color: "red", marginBottom: "35px" }}
+        sx={{ color: "red", marginBottom: "135px" }}
       />
     </div>
   );

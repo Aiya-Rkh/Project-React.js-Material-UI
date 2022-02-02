@@ -32,7 +32,7 @@ export default function AdminTable() {
       style={{
         display: "flex",
         justifyContent: "center",
-        margin: "100px 0",
+        margin: "100px 0 190px",
         borderRadius: 5,
       }}
     >

@@ -28,7 +28,10 @@ export default function CartTable(props) {
   return (
     <>
       <TableContainer className="cart" component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table
+          sx={{ minWidth: 650, bgcolor: "snow" }}
+          aria-label="simple table"
+        >
           <TableHead>
             <TableRow>
               <TableCell>Название</TableCell>
